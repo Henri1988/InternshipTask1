@@ -4,7 +4,7 @@ import lombok.Data;
 @Data
 public class User {
 
-    private Integer id;
+    private int id;
     private String email;
     private String firstName;
     private String lastName;
@@ -19,9 +19,7 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String email, String firstName, String lastName, String password,
-                String mobileNumber, String companyName, String jobTitle, Integer companySize) {
-        this.id = id;
+    public User(String email, String firstName, String lastName, String password, String mobileNumber, String companyName, String jobTitle, Integer companySize) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -46,4 +44,6 @@ public class User {
                 + ", companySize=" + companySize
                 + ']';
     }
+
+
 }

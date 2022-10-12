@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,7 +64,7 @@
       <recent name="$PROJECT_DIR$/db" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.user_table_create.sql">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task1" />
@@ -86,9 +86,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +106,7 @@
       <workItem from="1665505708421" duration="361000" />
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
-      <workItem from="1665520585906" duration="10728000" />
+      <workItem from="1665520585906" duration="21400000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665574178279</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity.">
+      <created>1665576940387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665576940387</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +180,7 @@
     <MESSAGE value="Henri made main method" />
     <MESSAGE value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
     <MESSAGE value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
+    <MESSAGE value="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity." />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity." />
   </component>
 </project>
