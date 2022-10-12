@@ -83,7 +83,7 @@
       <workItem from="1665505708421" duration="361000" />
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
-      <workItem from="1665520585906" duration="700000" />
+      <workItem from="1665520585906" duration="5562000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -99,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665520831194</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Henri made main method">
+      <created>1665521696525</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665521696525</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Henri installed junit dependency to pom.xml" />
     <MESSAGE value="Henri made empty JdcbConnection class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri made empty JdcbConnection class" />
+    <MESSAGE value="Henri made main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri made main method" />
   </component>
 </project>
