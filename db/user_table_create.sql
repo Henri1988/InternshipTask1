@@ -1,10 +1,11 @@
 -- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2022-10-12 10:59:53.233
+-- Last modification date: 2022-10-12 11:55:17.219
 
 -- tables
 -- Table: user
 CREATE TABLE "user" (
     id serial  NOT NULL,
+    email varchar(320)  NOT NULL,
     first_name varchar(50)  NOT NULL,
     last_name varchar(50)  NOT NULL,
     mobile_number varchar(50)  NOT NULL,

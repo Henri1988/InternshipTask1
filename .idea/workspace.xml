@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -63,7 +64,7 @@
       <recent name="$PROJECT_DIR$/db" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.user_create.sql">
+  <component name="RunManager" selected="Database Script.user_table_create.sql">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task1" />
@@ -77,8 +78,15 @@
       <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="user_table_create.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/db/user_table_create.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
         <item itemvalue="Application.Main" />
       </list>
@@ -98,7 +106,7 @@
       <workItem from="1665505708421" duration="361000" />
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
-      <workItem from="1665520585906" duration="8137000" />
+      <workItem from="1665520585906" duration="10728000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -128,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665566222064</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there">
+      <created>1665574164925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665574164925</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there">
+      <created>1665574178279</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665574178279</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +172,7 @@
     <MESSAGE value="Henri made empty JdcbConnection class" />
     <MESSAGE value="Henri made main method" />
     <MESSAGE value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
+    <MESSAGE value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
   </component>
 </project>

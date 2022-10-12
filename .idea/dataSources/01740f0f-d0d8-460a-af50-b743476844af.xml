@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1845</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1854</IntrospectionStateNumber>
       <ServerVersion>14.3</ServerVersion>
       <StartupTime>1665390640</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13654||10|C|G
 13654||-9223372036854775808|U|G
 13654||10|U|G</Grants>
-      <IntrospectionStateNumber>1845</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1854</IntrospectionStateNumber>
       <ObjectId>14020</ObjectId>
       <Relations>sequence|table|16395|16396|1
 sequence|table|16404|16405|1
@@ -829,7 +829,7 @@ sequence|table|25598|25599|1
 sequence|table|25605|25606|1
 sequence|table|33175|33176|1
 sequence|table|33184|33185|1
-sequence|table|33205|33206|1
+sequence|table|33224|33225|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4268,7 +4268,7 @@ sequence|table|33205|33206|1
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1845</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1854</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4279,7 +4279,7 @@ sequence|table|33205|33206|1
       <OwnerName>postgres</OwnerName>
     </schema>
     <schema id="266" parent="2" name="user_task1">
-      <IntrospectionStateNumber>1845</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1854</IntrospectionStateNumber>
       <ObjectId>33198</ObjectId>
       <StateNumber>1838</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4346,13 +4346,13 @@ sequence|table|33205|33206|1
     </table>
     <sequence id="277" parent="266" name="user_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>33205</ObjectId>
-      <StateNumber>1844</StateNumber>
+      <ObjectId>33224</ObjectId>
+      <StateNumber>1853</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="278" parent="266" name="user">
-      <ObjectId>33206</ObjectId>
-      <StateNumber>1844</StateNumber>
+      <ObjectId>33225</ObjectId>
+      <StateNumber>1853</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4609,72 +4609,79 @@ sequence|table|33205|33206|1
       <DefaultExpression>nextval(&apos;user_task1.user_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="313" parent="278" name="first_name">
-      <DataType>varchar(50)|0s</DataType>
+    <column id="313" parent="278" name="email">
+      <DataType>varchar(320)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="314" parent="278" name="last_name">
+    <column id="314" parent="278" name="first_name">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="315" parent="278" name="mobile_number">
+    <column id="315" parent="278" name="last_name">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="316" parent="278" name="company_name">
-      <DataType>varchar(255)|0s</DataType>
+    <column id="316" parent="278" name="mobile_number">
+      <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="317" parent="278" name="job_title">
-      <DataType>varchar(100)|0s</DataType>
+    <column id="317" parent="278" name="company_name">
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="278" name="company_size">
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StateNumber>1844</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="319" parent="278" name="password">
+    <column id="318" parent="278" name="job_title">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StateNumber>1844</StateNumber>
+      <Position>7</Position>
+      <StateNumber>1853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="320" parent="278" name="user_pk">
+    <column id="319" parent="278" name="company_size">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>1853</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="320" parent="278" name="password">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StateNumber>1853</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="321" parent="278" name="user_pk">
       <ColNames>id</ColNames>
-      <ObjectId>33212</ObjectId>
+      <ObjectId>33231</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1844</StateNumber>
+      <StateNumber>1853</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="321" parent="278" name="user_pk">
+    <key id="322" parent="278" name="user_pk">
       <ColNames>id</ColNames>
-      <ObjectId>33213</ObjectId>
+      <ObjectId>33232</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1844</StateNumber>
-      <UnderlyingIndexId>33212</UnderlyingIndexId>
+      <StateNumber>1853</StateNumber>
+      <UnderlyingIndexId>33231</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
