@@ -113,7 +113,7 @@
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
       <workItem from="1665520585906" duration="28736000" />
-      <workItem from="1665685582122" duration="332000" />
+      <workItem from="1665685582122" duration="1100000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -185,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665645967371</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Henri renamed Dao interface to UserDao interface and renamed UserDao class to UserDaoJpaImpl.">
+      <created>1665686274811</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665686274811</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +218,7 @@
     <MESSAGE value="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity." />
     <MESSAGE value="Made main method, UserDao class and added saveUser method there. Also modified JdcbConnection class." />
     <MESSAGE value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
+    <MESSAGE value="Henri renamed Dao interface to UserDao interface and renamed UserDao class to UserDaoJpaImpl." />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri renamed Dao interface to UserDao interface and renamed UserDao class to UserDaoJpaImpl." />
   </component>
 </project>
