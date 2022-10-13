@@ -106,7 +106,7 @@
       <workItem from="1665505708421" duration="361000" />
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
-      <workItem from="1665520585906" duration="25757000" />
+      <workItem from="1665520585906" duration="26163000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665588009946</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class.">
+      <created>1665645896020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665645896020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +196,7 @@
     <MESSAGE value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
     <MESSAGE value="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity." />
     <MESSAGE value="Made main method, UserDao class and added saveUser method there. Also modified JdcbConnection class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made main method, UserDao class and added saveUser method there. Also modified JdcbConnection class." />
+    <MESSAGE value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
   </component>
 </project>
