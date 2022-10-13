@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb12d4a0-be07-45fc-ab5b-79688f78570f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spi/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spi/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spi/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spi/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -31,17 +31,36 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FznTrVe47wcQQblcBFGsWa4Jsk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -68,6 +87,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/db" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -113,7 +135,8 @@
       <workItem from="1665518842399" duration="617000" />
       <workItem from="1665519702534" duration="387000" />
       <workItem from="1665520585906" duration="28736000" />
-      <workItem from="1665685582122" duration="1100000" />
+      <workItem from="1665685582122" duration="1671000" />
+      <workItem from="1665687879891" duration="9522000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -192,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665686274811</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Henri added hibernate-entitymanager to pom.xml">
+      <created>1665687383500</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665687383501</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +240,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Henri installed junit dependency to pom.xml" />
     <MESSAGE value="Henri made empty JdcbConnection class" />
     <MESSAGE value="Henri made main method" />
@@ -219,6 +250,7 @@
     <MESSAGE value="Made main method, UserDao class and added saveUser method there. Also modified JdcbConnection class." />
     <MESSAGE value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
     <MESSAGE value="Henri renamed Dao interface to UserDao interface and renamed UserDao class to UserDaoJpaImpl." />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri renamed Dao interface to UserDao interface and renamed UserDao class to UserDaoJpaImpl." />
+    <MESSAGE value="Henri added hibernate-entitymanager to pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri added hibernate-entitymanager to pom.xml" />
   </component>
 </project>
