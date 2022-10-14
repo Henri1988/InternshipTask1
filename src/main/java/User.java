@@ -62,4 +62,18 @@ public class User {
         this.companySize = companySize;
         this.password = password;
     }
+
+    public String toString() {
+        return "User["
+                + "id=" + id
+                + ", email=" + email
+                + ", firstName=" + firstName
+                + ", lastName=" + lastName
+                + ", mobileNumber=" + mobileNumber
+                + ", companyName=" + companyName
+                + ", jobTitle=" + jobTitle
+                + ", companySize=" + companySize
+                + ", password=" + password
+                + ']';
+    }
 }

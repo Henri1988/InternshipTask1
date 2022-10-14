@@ -1,10 +1,12 @@
 package spi;
 
+import java.util.Collection;
 
 public interface UserDao<T,I>{
 
-//    Collection<T> getAll();
     void save(T t);
-//    void update(T t);
-//    void delete(T t);
+    void update(T t);
+    void delete(T t);
+
+    void find();
 }

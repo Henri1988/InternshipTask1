@@ -6,6 +6,7 @@
 
     <persistence-unit name="PERSISTENCE" transaction-type="RESOURCE_LOCAL">
 
+
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" /> <!-- BD Mane -->
