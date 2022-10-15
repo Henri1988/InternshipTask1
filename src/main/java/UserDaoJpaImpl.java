@@ -8,6 +8,7 @@ import javax.persistence.Persistence;
 public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
 
+    @Override
     public void save(User user) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -19,6 +20,7 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         entityManagerFactory.close();
     }
 
+    @Override
     public void update(User user) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -36,6 +38,7 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         entityManagerFactory.close();
     }
 
+    @Override
     public void delete(User user) {
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
@@ -49,6 +52,7 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         entityManager.close();
     }
 
+    @Override
     public void find() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

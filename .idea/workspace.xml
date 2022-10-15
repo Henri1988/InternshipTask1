@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="JPA_and_hibernate" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,6 +115,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.user_table_create.sql" />
+        <item itemvalue="Database Script.user_create.sql" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
