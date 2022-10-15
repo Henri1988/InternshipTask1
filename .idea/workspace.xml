@@ -241,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665849569541</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Henri amended persistence.xml file.">
+      <created>1665856132678</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665856132678</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +280,7 @@
     <MESSAGE value="Henri added persistence.xml file to the resourses/META-INF directory" />
     <MESSAGE value="Henri added persistence.xml file to the resourses/META-INF directory and started making CRUD methods" />
     <MESSAGE value="Henri finished making CRUD methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri finished making CRUD methods" />
+    <MESSAGE value="Henri amended persistence.xml file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri amended persistence.xml file." />
   </component>
 </project>
