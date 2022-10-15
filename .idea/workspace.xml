@@ -44,7 +44,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -234,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665701337685</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Henri finished making CRUD methods">
+      <created>1665849569541</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665849569541</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +272,7 @@
     <MESSAGE value="Henri added hibernate-entitymanager to pom.xml" />
     <MESSAGE value="Henri added persistence.xml file to the resourses/META-INF directory" />
     <MESSAGE value="Henri added persistence.xml file to the resourses/META-INF directory and started making CRUD methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri added persistence.xml file to the resourses/META-INF directory and started making CRUD methods" />
+    <MESSAGE value="Henri finished making CRUD methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Henri finished making CRUD methods" />
   </component>
 </project>
