@@ -14,8 +14,8 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
 
-        entityManager.persist(user);
-        entityManager.getTransaction().commit();
+        entityManager.persist(user); //persist ei ole insert!!!
+        entityManager.getTransaction().commit();  // siin peegeldatakse tulemus andmebaasi alles
         entityManager.close();
         entityManagerFactory.close();
     }
