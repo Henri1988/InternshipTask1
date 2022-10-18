@@ -1,39 +1,52 @@
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import spi.UserDao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
-    private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
+    //private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
+
+    public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
+        LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
+        factory.setPersistenceUnitName("PERSISTENCE");
+        return factory;
+    }
+
 
     public static void main(String[] args) {
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
+        EntityManager em = emf.createEntityManager();
+        try {
+            nativeQuery(em, "SHOW TABLES");
+            nativeQuery(em, "SHOW COLUMNS from Person");
 
-
-        //SAVE
-        User user1 = new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
-                "Urban Architecture As", "CEO", 3, "Upkeep123");
-        save(user1);
-
-        //GET
-        get();
-
-        //UPDATE
-        update(user1);
-
-        //Delete
-        delete(user1);
-
+        } finally {
+            em.close();
+            emf.close();
+        }
     }
 
-    public static void save(User user) {
-        userDaoJpaImpl.save(user);
+    private static void nativeQuery(EntityManager em, String s) {
+        System.out.printf("---------------------------%n'%s'%n", s);
+        Query query = em.createNativeQuery(s);
+        List list = query.getResultList();
+        for (Object o : list) {
+            if (o instanceof Object[]) {
+                System.out.println(Arrays.toString((Object[]) o));
+            } else {
+                System.out.println(o);
+            }
+        }
     }
-    public static void update(User user){
-        userDaoJpaImpl.update(user);
-    }
-    public static void delete(User user){
-        userDaoJpaImpl.delete(user);
-    }
-    public static void get(){
-        userDaoJpaImpl.find();
-    }
+
+
 
 }

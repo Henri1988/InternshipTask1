@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
@@ -10,11 +11,8 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
 <!--        kui see on kirjas siis pole vaja eraldi entiteid deklareerida-->
 
-
-
-
-
         <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" /> <!-- BD Mane -->
             <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->

@@ -1,39 +1,28 @@
-import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
+
 @Entity
 @Table(name = "\"user\"", schema = "user_task1")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Integer id;
-
-    @Column(name = "email", nullable = false, length = 320)
     private String email;
-
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
-
     @Column(name = "last_name", nullable = false, length = 50)
     private String lastName;
-
     @Column(name = "mobile_number", nullable = false, length = 50)
     private String mobileNumber;
-
     @Column(name = "company_name", nullable = false)
     private String companyName;
-
     @Column(name = "job_title", nullable = false, length = 100)
     private String jobTitle;
-
     @Column(name = "company_size", nullable = false)
     private Integer companySize;
-
-    @Column(name = "password", nullable = false, length = 100)
     private String password;
+
 
     public User() {
     }
@@ -75,5 +64,77 @@ public class User {
                 + ", companySize=" + companySize
                 + ", password=" + password
                 + ']';
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public Integer getCompanySize() {
+        return companySize;
+    }
+
+    public void setCompanySize(Integer companySize) {
+        this.companySize = companySize;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
