@@ -16,5 +16,6 @@ CREATE TABLE "user" (
     CONSTRAINT user_pk PRIMARY KEY (id)
 );
 
+
 -- End of file.
 
