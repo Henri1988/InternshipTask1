@@ -1,13 +1,17 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
+import spi.GroupDao;
+import spi.IGenericDao;
 import spi.UserDao;
 
 
 @Configuration
 public class Main {
 
+
     private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
+
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
         LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
@@ -44,4 +48,5 @@ public class Main {
     public static void deleteUser(User user){
         userDaoJpaImpl.delete(user);
     }
+
 }

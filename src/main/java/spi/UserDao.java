@@ -9,11 +9,10 @@ import java.util.Collection;
 
 
 @Component
-public interface UserDao<T,I>{
+public interface UserDao<T,I> extends IGenericDao <T,I>  {
 
     void save(T t);
     void update(T t);
     void delete(T t);
-
     void find();
 }

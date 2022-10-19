@@ -17,9 +17,9 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -150,7 +150,7 @@
       <workItem from="1665730808055" duration="11747000" />
       <workItem from="1665928688078" duration="1766000" />
       <workItem from="1666024640323" duration="526000" />
-      <workItem from="1666026537488" duration="27797000" />
+      <workItem from="1666026537488" duration="30737000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -299,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666178820333</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Made empty GenericDaoJpaImpl class">
+      <created>1666185209371</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666185209371</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
