@@ -15,11 +15,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Tag Library Descriptor" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="com.haulmont.jpb.JpaEntity" />
       </list>
     </option>
   </component>
@@ -150,7 +150,7 @@
       <workItem from="1665730808055" duration="11747000" />
       <workItem from="1665928688078" duration="1766000" />
       <workItem from="1666024640323" duration="526000" />
-      <workItem from="1666026537488" duration="26702000" />
+      <workItem from="1666026537488" duration="27396000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -285,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666176506158</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added Group entity and GroupDao">
+      <created>1666177898471</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666177898471</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +328,8 @@
     <MESSAGE value="Henri added spring dependencies to pom.xml" />
     <MESSAGE value="amended User class entity annotations" />
     <MESSAGE value="Made all CRUD methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made all CRUD methods" />
+    <MESSAGE value="Added Group entity and GroupDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Group entity and GroupDao" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
