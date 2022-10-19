@@ -1,67 +1,65 @@
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
 import spi.UserDao;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 
+@Component
 public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
+    AnnotationConfigApplicationContext context =
+            new AnnotationConfigApplicationContext(Main.class);
+    EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
+    EntityManager em = emf.createEntityManager();
 
     @Override
     public void save(User user) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-
-        entityManager.persist(user); //persist ei ole insert!!!
-        entityManager.getTransaction().commit();  // siin peegeldatakse tulemus andmebaasi alles
-        entityManager.close();
-        entityManagerFactory.close();
-    }
-
-    @Override
-    public void update(User user) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-
-        user = entityManager.find(User.class, 66);
-
-        user.setFirstName("Rob");
-        user.setLastName("Ryan");
-        user.setEmail("rob.ryan@mail.com");
-        user.setCompanyName("Kuehne & Nagel");
-        user.setMobileNumber("+37287253823");
-        entityManager.getTransaction().commit();
-        entityManager.close();
-        entityManagerFactory.close();
-    }
-
-    @Override
-    public void delete(User user) {
-
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        entityManager.getTransaction().begin();
-
-        user = entityManager.find(User.class, 66);
-        System.out.println("user id :: " + user.getId());
-        entityManager.remove(user);
-        entityManager.getTransaction().commit();
-        entityManager.close();
+        try {
+            em.getTransaction().begin();
+            em.persist(user);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be added.");
+        }
     }
 
     @Override
     public void find() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("PERSISTENCE");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            User user = em.find(User.class, 75);
+            if (user != null) {
+                System.out.println(user.toString());
+            }
+            em.getTransaction().commit();
 
-        User user = entityManager.find(User.class, 66);
-
-        if(user !=null){
-            System.out.println(user.toString());
+        } catch (Exception e) {
+            System.out.println("User does not exist.");
         }
     }
 
+    @Override
+    public void update(User user) {
+        try {
+            em.getTransaction().begin();
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be updated.");
+        }
+    }
+
+    @Override
+    public void delete(User user) {
+        try {
+            em.getTransaction().begin();
+            user = em.find(User.class, 24);
+            em.remove(user);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be deleted.");
+        }finally {
+            em.close();
+        }
+    }
 }

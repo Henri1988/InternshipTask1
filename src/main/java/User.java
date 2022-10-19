@@ -7,7 +7,8 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column (name = "id", nullable = false)
+    private Integer userId;
     private String email;
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
@@ -23,25 +24,27 @@ public class User {
     private Integer companySize;
     private String password;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", companySize=" + companySize +
+                ", password='" + password + '\'' +
+                '}';
+    }
 
     public User() {
     }
 
-    public User(String email, String firstName, String lastName, String mobileNumber, String companyName,
-                String jobTitle, Integer companySize, String password) {
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.mobileNumber = mobileNumber;
-        this.companyName = companyName;
-        this.jobTitle = jobTitle;
-        this.companySize = companySize;
-        this.password = password;
-    }
-
-    public User(Integer id, String email, String firstName, String lastName, String mobileNumber,
+    public User(Integer userId, String email, String firstName, String lastName, String mobileNumber,
                 String companyName, String jobTitle, Integer companySize, String password) {
-        this.id = id;
+        this.userId = userId;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -52,26 +55,24 @@ public class User {
         this.password = password;
     }
 
-    public String toString() {
-        return "User["
-                + "id=" + id
-                + ", email=" + email
-                + ", firstName=" + firstName
-                + ", lastName=" + lastName
-                + ", mobileNumber=" + mobileNumber
-                + ", companyName=" + companyName
-                + ", jobTitle=" + jobTitle
-                + ", companySize=" + companySize
-                + ", password=" + password
-                + ']';
+    public User(String email, String firstName, String lastName, String mobileNumber,
+                String companyName, String jobTitle, Integer companySize, String password) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.mobileNumber = mobileNumber;
+        this.companyName = companyName;
+        this.jobTitle = jobTitle;
+        this.companySize = companySize;
+        this.password = password;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {

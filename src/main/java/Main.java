@@ -1,52 +1,47 @@
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import spi.UserDao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Query;
-import java.util.Arrays;
-import java.util.List;
 
+@Configuration
 public class Main {
 
-    //private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
-
+    private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
+    @Bean
     public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
         LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
         factory.setPersistenceUnitName("PERSISTENCE");
         return factory;
     }
 
-
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(AppConfig.class);
-        EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
-        EntityManager em = emf.createEntityManager();
-        try {
-            nativeQuery(em, "SHOW TABLES");
-            nativeQuery(em, "SHOW COLUMNS from Person");
 
-        } finally {
-            em.close();
-            emf.close();
-        }
+        User user1= new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
+                "Urban Architecture As", "CEO", 3, "Upkeep123");
+        //SAVE
+        saveUser(user1);
+        //GET
+        findUser();
+        //UPDATE
+        user1.setFirstName("Kaarel");
+        user1.setLastName("Suvi");
+        user1.setEmail("kaarel.suvi@mail.com");
+        updateUser(user1);
+        //DELETE
+        deleteUser(user1);
     }
 
-    private static void nativeQuery(EntityManager em, String s) {
-        System.out.printf("---------------------------%n'%s'%n", s);
-        Query query = em.createNativeQuery(s);
-        List list = query.getResultList();
-        for (Object o : list) {
-            if (o instanceof Object[]) {
-                System.out.println(Arrays.toString((Object[]) o));
-            } else {
-                System.out.println(o);
-            }
-        }
+    public static void saveUser(User user) {
+        userDaoJpaImpl.save(user);
     }
-
-
-
+    public static void updateUser(User user){
+        userDaoJpaImpl.update(user);
+    }
+    public static void findUser (){
+        userDaoJpaImpl.find();
+    }
+    public static void deleteUser(User user){
+        userDaoJpaImpl.delete(user);
+    }
 }

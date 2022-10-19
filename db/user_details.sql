@@ -1,0 +1,1 @@
+INSERT INTO user_task1."user" (id, email, first_name, last_name, mobile_number, company_name, job_title, company_size, password) VALUES (DEFAULT, 'henri.eessalu@gmail.com', 'Henri', 'Eessalu', '+37256640162', 'Architecture AS', 'CEO', 3, 'upkeep123')
