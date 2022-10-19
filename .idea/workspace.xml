@@ -17,16 +17,16 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="JPA_and_hibernate2" />
+        <entry key="$PROJECT_DIR$" value="spring-jpa" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -150,7 +150,7 @@
       <workItem from="1665730808055" duration="11747000" />
       <workItem from="1665928688078" duration="1766000" />
       <workItem from="1666024640323" duration="526000" />
-      <workItem from="1666026537488" duration="27396000" />
+      <workItem from="1666026537488" duration="27797000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -292,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666177898471</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Made empty GenericDaoJpaImpl class">
+      <created>1666178820333</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1666178820333</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +336,8 @@
     <MESSAGE value="amended User class entity annotations" />
     <MESSAGE value="Made all CRUD methods" />
     <MESSAGE value="Added Group entity and GroupDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Group entity and GroupDao" />
+    <MESSAGE value="Made empty GenericDaoJpaImpl class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made empty GenericDaoJpaImpl class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
