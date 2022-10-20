@@ -1,37 +1,62 @@
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import spi.GroupDao;
 import spi.IGenericDao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
+import java.lang.reflect.ParameterizedType;
 
 
 @Component
-public class GenericDaoJpaImpl implements IGenericDao <User, Integer> {
+public class GenericDaoJpaImpl<k, e> implements IGenericDao<k, e> {
 
-    AnnotationConfigApplicationContext context =
-            new AnnotationConfigApplicationContext(Main.class);
-    EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
-    EntityManager em = emf.createEntityManager();
+    private final Class entityBeanType;
+    @PersistenceContext
+    protected EntityManager em;
 
-
-    @Override
-    public void save(User user) {
-
+    @SuppressWarnings("unchecked")
+    public GenericDaoJpaImpl() {
+        this.entityBeanType = ((Class) ((ParameterizedType) getClass()
+                .getGenericSuperclass()).getActualTypeArguments()[0]);
     }
 
     @Override
-    public void update(User user) {
+    public void save(e entity) {
+
+        try {
+            em.getTransaction().begin();
+            em.persist(entity);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println( entity + " cannot be added.");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void update(e entity) {
 
     }
 
-    @Override
-    public void delete(User user) {
-
+    public void delete(e entity) {
+        em.remove(entity);
     }
 
     @Override
     public void find() {
 
     }
+
 }
+

@@ -1,13 +1,8 @@
 package spi;
-
-
+import jdk.javadoc.internal.doclets.toolkit.util.Group;
 import org.springframework.stereotype.Component;
 
 @Component
-public interface GroupDao <T,I> extends IGenericDao <T,I> {
-    void save(T t);
-    void update(T t);
-    void delete(T t);
+public interface GroupDao extends IGenericDao <Integer, Group>{
 
-    void find();
 }

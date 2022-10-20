@@ -18,8 +18,8 @@
         <option value="Tag Library Descriptor" />
         <option value="spring-beans.schema" />
         <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,6 +86,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="spi" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/db" />
     </key>
@@ -93,7 +96,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.group_create.sql">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task1" />
@@ -121,8 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Database Script.group_create.sql" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.group_create.sql" />
         <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
         <item itemvalue="Database Script.user_table_create.sql" />
@@ -150,7 +153,7 @@
       <workItem from="1665730808055" duration="11747000" />
       <workItem from="1665928688078" duration="1766000" />
       <workItem from="1666024640323" duration="526000" />
-      <workItem from="1666026537488" duration="30737000" />
+      <workItem from="1666026537488" duration="41136000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -306,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666185209371</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Made IGenericDao interface">
+      <created>1666196922202</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666196922202</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Amended Group entity">
+      <created>1666197094247</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1666197094247</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +361,9 @@
     <MESSAGE value="Made all CRUD methods" />
     <MESSAGE value="Added Group entity and GroupDao" />
     <MESSAGE value="Made empty GenericDaoJpaImpl class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made empty GenericDaoJpaImpl class" />
+    <MESSAGE value="Made IGenericDao interface" />
+    <MESSAGE value="Amended Group entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amended Group entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

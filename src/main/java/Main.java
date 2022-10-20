@@ -1,16 +1,22 @@
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
+import org.springframework.stereotype.Component;
 import spi.GroupDao;
 import spi.IGenericDao;
-import spi.UserDao;
+
 
 
 @Configuration
 public class Main {
 
 
-    private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
+
+
+//  private static final UserDao<User, Integer> userGenericDaoJpaImpl = new GenericDaoJpaImpl();
+    private static final IGenericDao<Integer,Group> groupGenericDaoJpaImpl = new GenericDaoJpaImpl();
+
 
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
@@ -21,32 +27,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        User user1= new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
-                "Urban Architecture As", "CEO", 3, "Upkeep123");
+        Group group1 = new Group("Group 1");
         //SAVE
-        saveUser(user1);
-        //GET
-        findUser();
-        //UPDATE
-        user1.setFirstName("Kaarel");
-        user1.setLastName("Suvi");
-        user1.setEmail("kaarel.suvi@mail.com");
-        updateUser(user1);
-        //DELETE
-        deleteUser(user1);
+        saveGroup(group1);
+
     }
 
-    public static void saveUser(User user) {
-        userDaoJpaImpl.save(user);
+    public static void saveGroup(Group group) {
+        groupGenericDaoJpaImpl.save(group);
     }
-    public static void updateUser(User user){
-        userDaoJpaImpl.update(user);
-    }
-    public static void findUser (){
-        userDaoJpaImpl.find();
-    }
-    public static void deleteUser(User user){
-        userDaoJpaImpl.delete(user);
-    }
+
 
 }
