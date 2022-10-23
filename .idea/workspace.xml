@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666197094247</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Made saveGroup method">
+      <created>1666530790136</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1666530790136</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +370,8 @@
     <MESSAGE value="Made empty GenericDaoJpaImpl class" />
     <MESSAGE value="Made IGenericDao interface" />
     <MESSAGE value="Amended Group entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Amended Group entity" />
+    <MESSAGE value="Made saveGroup method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made saveGroup method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

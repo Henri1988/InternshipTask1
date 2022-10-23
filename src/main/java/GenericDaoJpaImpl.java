@@ -8,7 +8,7 @@ import java.io.Serializable;
 //Extend this abstract class to implement DAO for your specific needs.
 
 @ Component
-public abstract class GenericDaoJpaImpl<T, ID extends Serializable> implements IGenericDao<T, ID> {
+public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
 
     private Class<T>persistentClass;
     private EntityManager entityManager;
