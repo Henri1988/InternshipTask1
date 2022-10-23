@@ -15,25 +15,11 @@ import java.util.List;
 @PersistenceContext
 public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
-    @Bean
-    public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
-        LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
-        factory.setPersistenceUnitName("PERSISTENCE");
-        return factory;
-    }
 
     static AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(Main.class);
     static EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
     static EntityManager em = emf.createEntityManager();
-
-    public static void main(String[] args) {
-
-       User user1 = new User
-
-
-    }
-
 
     public JpaGroupDao(Class<Group> persistentClass) {
         super(persistentClass);
@@ -46,6 +32,10 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
         em.getTransaction().commit();
         return group;
     }
+
+
+
+
 
 
 
