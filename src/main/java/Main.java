@@ -1,3 +1,4 @@
+import jdk.javadoc.internal.doclets.toolkit.util.Group;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +16,9 @@ public class Main {
 
 
 //  private static final UserDao<User, Integer> userGenericDaoJpaImpl = new GenericDaoJpaImpl();
-//    private static final IGenericDao<Integer,Group> groupGenericDaoJpaImpl = new GenericDaoJpaImpl();
+
+
+
 
 
     @Bean
@@ -27,8 +30,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-
     }
+
 
 
 }
