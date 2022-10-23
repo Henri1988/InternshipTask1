@@ -1,7 +1,9 @@
 import jdk.javadoc.internal.doclets.toolkit.util.Group;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spi.GroupDao;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
@@ -10,7 +12,10 @@ import java.util.List;
 @PersistenceContext
 public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
-    EntityManager em;
+    AnnotationConfigApplicationContext context =
+            new AnnotationConfigApplicationContext(Main.class);
+    EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
+    EntityManager em = emf.createEntityManager();
 
 
     public JpaGroupDao(Class<Group> persistentClass) {
