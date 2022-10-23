@@ -1,62 +1,41 @@
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
-import spi.GroupDao;
 import spi.IGenericDao;
-
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
-import java.lang.reflect.ParameterizedType;
+import java.io.Serializable;
 
+//Provides generic common implementation of GenericDao interface persistence methods.
+//Extend this abstract class to implement DAO for your specific needs.
 
-@Component
-public class GenericDaoJpaImpl<k, e> implements IGenericDao<k, e> {
+@ Component
+public abstract class GenericDaoJpaImpl<T, ID extends Serializable> implements IGenericDao<T, ID> {
 
-    private final Class entityBeanType;
+    private Class<T>persistentClass;
+    private EntityManager entityManager;
+    public GenericDaoJpaImpl (Class <T>persistentClass){
+        this.persistentClass = persistentClass;
+
+    }
+
+    protected EntityManager getEntityManager() {            //We don't want to give access to EM except the classes that extend the GenericDaoJpaImpl
+        return entityManager;                               //That's why it is protected.
+    }
     @PersistenceContext
-    protected EntityManager em;
-
-    @SuppressWarnings("unchecked")
-    public GenericDaoJpaImpl() {
-        this.entityBeanType = ((Class) ((ParameterizedType) getClass()
-                .getGenericSuperclass()).getActualTypeArguments()[0]);
+    public void setEntityManager(EntityManager entityManager) {     //This should be public because its annotated.
+        this.entityManager = entityManager;                         //When application starts, we need to point where to inject the EntityManager
     }
 
-    @Override
-    public void save(e entity) {
-
-        try {
-            em.getTransaction().begin();
-            em.persist(entity);
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            System.out.println( entity + " cannot be added.");
-        }
+    public Class<T> getPersistentClass() {
+        return persistentClass;
     }
 
 
-
-
-
-
-
-
-
-
-    @Override
-    public void update(e entity) {
-
+    public T save(T entity) {
+        getEntityManager().persist(entity);
+        return entity;
     }
 
-    public void delete(e entity) {
-        em.remove(entity);
-    }
 
-    @Override
-    public void find() {
-
-    }
 
 }
 

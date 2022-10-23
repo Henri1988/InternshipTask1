@@ -1,11 +1,19 @@
 package spi;
 
 
+import org.springframework.stereotype.Component;
 
-public interface IGenericDao <k,e> { //k- is the type to use as the key
-                                    // e- parameter, is the type of the entity
-    void save(e entity);
-    void update(e entity);
-    void delete(e entity);
-    void find();
+import java.io.Serializable;
+import java.util.List;
+
+
+//Generic interface for Data Access Objects. To be extended or implemented.
+//This interface contains common persistence methods.
+@Component
+public interface IGenericDao <T,ID extends Serializable> { // T- We allow it to accept any entity types
+
+    T save(T entity);
+    T update(T entity);
+    void delete(T entity);
+    List <T> findAll();
 }

@@ -15,7 +15,7 @@ public class Main {
 
 
 //  private static final UserDao<User, Integer> userGenericDaoJpaImpl = new GenericDaoJpaImpl();
-    private static final IGenericDao<Integer,Group> groupGenericDaoJpaImpl = new GenericDaoJpaImpl();
+//    private static final IGenericDao<Integer,Group> groupGenericDaoJpaImpl = new GenericDaoJpaImpl();
 
 
     @Bean
@@ -27,14 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Group group1 = new Group("Group 1");
-        //SAVE
-        saveGroup(group1);
 
-    }
-
-    public static void saveGroup(Group group) {
-        groupGenericDaoJpaImpl.save(group);
     }
 
 
