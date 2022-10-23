@@ -1,6 +1,9 @@
 import jdk.javadoc.internal.doclets.toolkit.util.Group;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import spi.GroupDao;
+import spi.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,17 +15,31 @@ import java.util.List;
 @PersistenceContext
 public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
-    AnnotationConfigApplicationContext context =
+    @Bean
+    public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
+        LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
+        factory.setPersistenceUnitName("PERSISTENCE");
+        return factory;
+    }
+
+    static AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(Main.class);
-    EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
-    EntityManager em = emf.createEntityManager();
+    static EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
+    static EntityManager em = emf.createEntityManager();
+
+    public static void main(String[] args) {
+
+       User user1 = new User
+
+
+    }
 
 
     public JpaGroupDao(Class<Group> persistentClass) {
         super(persistentClass);
     }
 
-    @Override
+
     public Group save(Group group) {
         em.getTransaction().begin();
         em.persist(group);

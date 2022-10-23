@@ -18,20 +18,4 @@ public class Main {
 //  private static final UserDao<User, Integer> userGenericDaoJpaImpl = new GenericDaoJpaImpl();
 
 
-
-
-
-    @Bean
-    public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
-        LocalEntityManagerFactoryBean factory = new LocalEntityManagerFactoryBean();
-        factory.setPersistenceUnitName("PERSISTENCE");
-        return factory;
-    }
-
-    public static void main(String[] args) {
-
-    }
-
-
-
 }
