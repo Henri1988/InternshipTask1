@@ -1,6 +1,7 @@
 
 import entities.Group;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
 import spi.GroupDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,6 +11,7 @@ import java.util.List;
 
 
 @PersistenceContext
+@Component
 public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
 
@@ -21,7 +23,6 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     public JpaGroupDao(Class<Group> persistentClass) {
         super(persistentClass);
     }
-
 
 
     @Override
@@ -37,11 +38,9 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     public Group update(Group entity) {
         return null;
     }
-
     @Override
     public void delete(Group entity) {
     }
-
     @Override
     public List<Group> findAll() {
         return null;

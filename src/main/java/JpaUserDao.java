@@ -1,11 +1,13 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import entities.User;
+import org.springframework.stereotype.Component;
 import spi.UserDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
 
+@Component
 public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
 
@@ -13,7 +15,6 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
             new AnnotationConfigApplicationContext(Main.class);
     static EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
     static EntityManager em = emf.createEntityManager();
-
 
     public JpaUserDao(Class<User> persistentClass) {
         super(persistentClass);
