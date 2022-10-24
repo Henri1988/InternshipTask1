@@ -1,10 +1,7 @@
-import jdk.javadoc.internal.doclets.toolkit.util.Group;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
-import spi.GroupDao;
-import spi.User;
 
+import entities.Group;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import spi.GroupDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
@@ -26,17 +23,13 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     }
 
 
+    @Override
     public Group save(Group group) {
         em.getTransaction().begin();
         em.persist(group);
         em.getTransaction().commit();
         return group;
     }
-
-
-
-
-
 
 
     @Override
@@ -46,7 +39,6 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
     @Override
     public void delete(Group entity) {
-
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.io.Serializable;
 //Provides generic common implementation of GenericDao interface persistence methods.
 //Extend this abstract class to implement DAO for your specific needs.
 
-@ Component
+@Component
 public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
 
     private Class<T>persistentClass;
@@ -30,6 +30,7 @@ public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
     }
 
 
+    @Override
     public T save(T entity) {
         getEntityManager().persist(entity);
         return entity;

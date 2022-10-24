@@ -1,8 +1,6 @@
-import jdk.javadoc.internal.doclets.toolkit.util.Group;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import spi.User;
+import entities.User;
 import spi.UserDao;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import java.util.List;
@@ -22,9 +20,7 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
     }
 
 
-
-
-
+    @Override
     public User save(User user) {
         em.getTransaction().begin();
         em.persist(user);

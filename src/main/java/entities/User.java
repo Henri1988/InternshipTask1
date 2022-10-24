@@ -1,4 +1,4 @@
-package spi;
+package entities;
 
 import javax.persistence.*;
 
