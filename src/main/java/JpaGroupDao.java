@@ -23,6 +23,7 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     }
 
 
+
     @Override
     public Group save(Group group) {
         em.getTransaction().begin();
