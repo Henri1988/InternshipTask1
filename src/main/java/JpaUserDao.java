@@ -29,10 +29,18 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
         return user;
     }
 
+
     @Override
-    public User update(User entity) {
-        return null;
+    public User update(User user) {
+        try {
+            em.getTransaction().begin();
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be updated.");
+        }
+        return user;
     }
+
 
     @Override
     public void delete(User entity) {

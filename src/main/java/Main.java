@@ -36,6 +36,9 @@ public class Main {
                 "Urban Architecture As", "CEO", 3, "Upkeep123");
         saveUser(user1);
 
+        user1.setFirstName("Toomas");
+        updateUser(user1);
+
 
 
 
@@ -47,6 +50,10 @@ public class Main {
 
     public static User saveUser(User user) {
         return JpaUserDao.save(user);
+    }
+
+    public static User updateUser(User user){
+        return JpaUserDao.update(user);
     }
 
 }
