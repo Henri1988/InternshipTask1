@@ -339,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666530790136</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Made saveUser and saveGroup methods in the Main method">
+      <created>1666629559249</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1666629559249</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +387,8 @@
     <MESSAGE value="Made IGenericDao interface" />
     <MESSAGE value="Amended Group entity" />
     <MESSAGE value="Made saveGroup method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made saveGroup method" />
+    <MESSAGE value="Made saveUser and saveGroup methods in the Main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made saveUser and saveGroup methods in the Main method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

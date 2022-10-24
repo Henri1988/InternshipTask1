@@ -36,7 +36,7 @@ public class Main {
                 "Urban Architecture As", "CEO", 3, "Upkeep123");
         saveUser(user1);
 
-        saveGroup(new Group("First Group"));
+
 
 
     }

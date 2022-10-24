@@ -36,7 +36,10 @@ public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
         return entity;
     }
 
+    @Override
+    public T update(T entity) {
 
-
+        return null;
+    }
 }
 
