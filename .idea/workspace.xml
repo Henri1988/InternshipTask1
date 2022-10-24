@@ -346,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666629559249</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Made made updateUser method">
+      <created>1666639827744</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1666639827744</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +395,8 @@
     <MESSAGE value="Amended Group entity" />
     <MESSAGE value="Made saveGroup method" />
     <MESSAGE value="Made saveUser and saveGroup methods in the Main method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made saveUser and saveGroup methods in the Main method" />
+    <MESSAGE value="Made made updateUser method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made made updateUser method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

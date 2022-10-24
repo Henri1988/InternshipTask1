@@ -6,6 +6,8 @@ import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import spi.IGenericDao;
 import spi.UserDao;
 
+import java.util.List;
+
 
 @Configuration
 public class Main {
@@ -32,12 +34,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        entities.User user1 =new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
+        entities.User user1 =new User("henri.eessalu@gmail.com", "Peeter","Eessalu","+37256640162",
                 "Urban Architecture As", "CEO", 3, "Upkeep123");
-        saveUser(user1);
 
-        user1.setFirstName("Toomas");
+        //Save
+        saveUser(user1);
+        //Update
+        user1.setFirstName("Mari");
         updateUser(user1);
+        //Get
+        findUser();
+        //Delete
+        deleteUser(user1);
+
+
+
+
 
 
 
@@ -54,6 +66,15 @@ public class Main {
 
     public static User updateUser(User user){
         return JpaUserDao.update(user);
+    }
+
+    public static void deleteUser(User user){
+        JpaUserDao.delete(user);
+    }
+
+    public static void findUser(){
+        JpaUserDao.find();
+
     }
 
 }

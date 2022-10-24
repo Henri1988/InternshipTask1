@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import spi.UserDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import java.util.List;
 
 
@@ -23,12 +24,16 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
     @Override
     public User save(User user) {
-        em.getTransaction().begin();
-        em.persist(user);
-        em.getTransaction().commit();
+
+        try {
+            em.getTransaction().begin();
+            em.persist(user);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be added.");
+        }
         return user;
     }
-
 
     @Override
     public User update(User user) {
@@ -41,14 +46,37 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
         return user;
     }
 
-
     @Override
-    public void delete(User entity) {
+    public void find() {
+        try {
+            em.getTransaction().begin();
+            User user = em.find(User.class, 45);
+            if (user != null) {
+                System.out.println(user.toString());
+            }
+            em.getTransaction().commit();
 
+        } catch (Exception e) {
+            System.out.println("User does not exist.");
+        }
     }
 
+
     @Override
-    public List<User> findAll() {
-        return null;
+    public void delete(User user){
+        try {
+            em.getTransaction().begin();
+            user = em.find(User.class, 40);
+            em.remove(user);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            System.out.println("User cannot be deleted.");
+        }finally {
+            em.close();
+        }
     }
+
+
+
+
 }

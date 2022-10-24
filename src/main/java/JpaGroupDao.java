@@ -33,7 +33,6 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
         return group;
     }
 
-
     @Override
     public Group update(Group entity) {
         return null;
@@ -41,8 +40,5 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     @Override
     public void delete(Group entity) {
     }
-    @Override
-    public List<Group> findAll() {
-        return null;
-    }
+
 }
