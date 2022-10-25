@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb12d4a0-be07-45fc-ab5b-79688f78570f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/01740f0f-d0d8-460a-af50-b743476844af.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/01740f0f-d0d8-460a-af50-b743476844af.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GenericDaoJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GenericDaoJpaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JpaGroupDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JpaGroupDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JpaUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JpaUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spi/GroupDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spi/GroupDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +157,7 @@
       <workItem from="1666593877598" duration="1648000" />
       <workItem from="1666597629996" duration="223000" />
       <workItem from="1666597858204" duration="1431000" />
+      <workItem from="1666648470286" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -353,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666639827744</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Finished making Crud methods">
+      <created>1666648217014</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666648217014</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +398,8 @@
     <MESSAGE value="Made saveGroup method" />
     <MESSAGE value="Made saveUser and saveGroup methods in the Main method" />
     <MESSAGE value="Made made updateUser method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made made updateUser method" />
+    <MESSAGE value="Finished making Crud methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished making Crud methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
