@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666818613266</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added org.slf4j dependency to pom.xml">
+      <created>1666907807016</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666907807016</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +231,7 @@
     <MESSAGE value="Made main method, UserDao class and added saveUser method there. Also modified JdcbConnection class." />
     <MESSAGE value="Added getAllUsers, updateUser, deleteUser methods in the UserDao class. Called the methods in the Main class." />
     <MESSAGE value="added org.apache.commons dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="added org.apache.commons dependency" />
+    <MESSAGE value="added org.slf4j dependency to pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added org.slf4j dependency to pom.xml" />
   </component>
 </project>

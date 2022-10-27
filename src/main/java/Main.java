@@ -35,7 +35,7 @@ public class Main {
 
 
         try {
-            connection = dataSource.getConnection();
+            connection = dataSource.getConnection(); // Every operation needs to get a connection from the pool
 
             //POST
             User firstUser =
@@ -56,7 +56,7 @@ public class Main {
 
         } finally {
             assert connection != null;
-            connection.close();
+            dataSource.close();
         }
     }
 
