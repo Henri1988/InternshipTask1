@@ -25,15 +25,15 @@ public class Main {
             addUser(firstUser);
 
             //GET
-          /*  getAllUsers().forEach(System.out::println);
+            getAllUsers().forEach(System.out::println);
 
-            //PUT
-            firstUser.setFirstName("Franklin");
-            firstUser.setLastName("Lewis");
-            updateUser(firstUser);
-
-            //DELETE
-            deleteUser(firstUser);*/
+//            //PUT
+//            firstUser.setFirstName("Franklin");
+//            firstUser.setLastName("Lewis");
+//            updateUser(firstUser);
+//
+//            //DELETE
+//            deleteUser(firstUser);
 
 
         } finally {
@@ -45,9 +45,9 @@ public class Main {
         USER_DAO.save(user);
     }
 
-//    public static Collection<User>getAllUsers(){
-//        return USER_DAO.getAll();
-//    }
+    public static Collection<User>getAllUsers() throws SQLException{
+        return USER_DAO.getAll();
+    }
 //
 //    public static void updateUser(User user) {
 //        USER_DAO.update(user);

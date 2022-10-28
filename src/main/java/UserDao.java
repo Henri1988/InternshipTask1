@@ -51,40 +51,36 @@ public class UserDao implements Dao <User, Integer> {
         System.out.println("Rows inserted: " + rowsInserted);
     }
 
-//    @Override
-//    public Collection<User> getAll() {
-//        Collection<User> users = new ArrayList<>();
-//        String sql = "SELECT * FROM user_task1.user";
-//
-//        connection.ifPresent(conn -> {
-//            try (Statement statement = conn.createStatement();
-//                 ResultSet resultSet = statement.executeQuery(sql)) {
-//
-//                while (resultSet.next()) {
-//                    int id = resultSet.getInt("id");
-//                    String email = resultSet.getString("email");
-//                    String firstName = resultSet.getString("first_name");
-//                    String lastName = resultSet.getString("last_name");
-//                    String password = resultSet.getString("password");
-//                    String mobileNumber = resultSet.getString("mobile_number");
-//                    String companyName = resultSet.getString("company_name");
-//                    String jobTitle = resultSet.getString("job_title");
-//                    Integer companySize = resultSet.getInt("company_size");
-//
-//
-//                    User customer = new User(id, email, firstName, lastName,password, mobileNumber, companyName, jobTitle, companySize);
-//
-//                    users.add(customer);
-//
-//                    LOGGER.log(Level.INFO, "Found {0} in database", customer);
-//                }
-//
-//            } catch (SQLException ex) {
-//                LOGGER.log(Level.SEVERE, null, ex);
-//            }
-//        });
-//        return users;
-//    }
+    @Override
+    public Collection<User> getAll() throws SQLException {
+        Collection<User> users = new ArrayList<>();
+        Connection connection = Main.dataSource.getConnection();
+        String sql = "SELECT * FROM user_task1.user";
+        System.out.println("Showing all users...");
+
+            try (Statement statement = connection.createStatement();
+                 ResultSet resultSet = statement.executeQuery(sql)) {
+
+                while (resultSet.next()) {
+                    int id = resultSet.getInt("id");
+                    String email = resultSet.getString("email");
+                    String firstName = resultSet.getString("first_name");
+                    String lastName = resultSet.getString("last_name");
+                    String password = resultSet.getString("password");
+                    String mobileNumber = resultSet.getString("mobile_number");
+                    String companyName = resultSet.getString("company_name");
+                    String jobTitle = resultSet.getString("job_title");
+                    Integer companySize = resultSet.getInt("company_size");
+
+                    User customer = new User(id, email, firstName, lastName,password, mobileNumber, companyName, jobTitle, companySize);
+                    users.add(customer);
+                }
+
+            } finally {
+                connection.close();
+            }
+        return users;
+    }
 //
 //    @Override
 //    public void update(User user) {
