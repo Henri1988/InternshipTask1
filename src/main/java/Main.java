@@ -33,7 +33,7 @@ public class Main {
             //PUT
             firstUser.setFirstName("Lea");
             firstUser.setLastName("Saar");
-            updateUser(firstUser);
+            updateUser(secondUser);
 
             //DELETE
             deleteUser(firstUser);

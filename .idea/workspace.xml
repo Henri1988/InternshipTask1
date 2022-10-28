@@ -239,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666964196339</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Finished amending methods.">
+      <created>1666968886680</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1666968886680</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Finished amending methods.">
+      <created>1666968955760</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1666968955760</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +284,8 @@
     <MESSAGE value="save method" />
     <MESSAGE value="Finished making save method" />
     <MESSAGE value="Added getAll() method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getAll() method" />
+    <MESSAGE value="Finished amending methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished amending methods." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

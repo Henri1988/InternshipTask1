@@ -106,7 +106,8 @@ public class UserDao implements Dao <User, Integer> {
                 statement.setInt(8, nonNullUser.getCompanySize());
                 statement.setInt(9, nonNullUser.getId());
 
-                int numberOfUpdatedRows = statement.executeUpdate();
+                int rowsUpdated = statement.executeUpdate();
+                System.out.println("Rows updated: " + rowsUpdated);
 
             } finally {
                 connection.close();
