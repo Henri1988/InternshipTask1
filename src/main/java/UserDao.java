@@ -1,3 +1,4 @@
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import spi.Dao;
 import java.sql.*;
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
 
 public class UserDao implements Dao <User, Integer> {
 
-    public static HikariDataSource dataSource;
+
 
     @Override
     public void save(User user) throws SQLException {
@@ -24,8 +25,8 @@ public class UserDao implements Dao <User, Integer> {
 
 
 
-        System.out.println("Creating data ...");
-        Connection connection = dataSource.getConnection();
+        System.out.println("Creating user ...");
+        Connection connection = Main.dataSource.getConnection();
 
         int rowsInserted;
 

@@ -11,7 +11,7 @@ import java.util.Optional;
 public class Main {
 
     private static final Dao<User, Integer> USER_DAO = new UserDao();
-    private static HikariDataSource dataSource;
+    static HikariDataSource dataSource;
 
 
 
