@@ -14,6 +14,7 @@ public class Main {
     private static HikariDataSource dataSource;
 
 
+
     public static void main(String[] args) throws SQLException {
         try {
             initDatabaseConnectionPool();
@@ -56,7 +57,7 @@ public class Main {
 //        USER_DAO.delete(user);
 //    }
 
-    private static void initDatabaseConnectionPool() {
+    public static void initDatabaseConnectionPool() {
 
         HikariConfig config = new HikariConfig();
 

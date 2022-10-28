@@ -1,7 +1,5 @@
 import com.zaxxer.hikari.HikariDataSource;
 import spi.Dao;
-import utils.JdbcConnection;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,8 +12,7 @@ import java.util.logging.Logger;
 
 public class UserDao implements Dao <User, Integer> {
 
-    HikariDataSource dataSource;
-
+    public static HikariDataSource dataSource;
 
     @Override
     public void save(User user) throws SQLException {
