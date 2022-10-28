@@ -94,6 +94,8 @@ public class UserDao implements Dao <User, Integer> {
                 + "WHERE "
                 + "id = ?";
 
+        int rowsUpdated;
+
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
 
                 statement.setString(1, nonNullUser.getEmail());
@@ -106,12 +108,13 @@ public class UserDao implements Dao <User, Integer> {
                 statement.setInt(8, nonNullUser.getCompanySize());
                 statement.setInt(9, nonNullUser.getId());
 
-                int rowsUpdated = statement.executeUpdate();
-                System.out.println("Rows updated: " + rowsUpdated);
+                rowsUpdated = statement.executeUpdate();
+
 
             } finally {
                 connection.close();
             }
+            System.out.println("Rows updated: " + rowsUpdated);
 
     }
 
@@ -123,15 +126,17 @@ public class UserDao implements Dao <User, Integer> {
         User nonNullUser = Objects.requireNonNull(user, message);
         String sql = "DELETE FROM user_task1.user WHERE id = ?";
 
-            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+        int numberOfDeletedRows;
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
 
-                statement.setInt(1, nonNullUser.getId());
+            statement.setInt(1, nonNullUser.getId());
 
-                int numberOfDeletedRows = statement.executeUpdate();
+            numberOfDeletedRows = statement.executeUpdate();
 
-            } finally {
-                connection.close();
-            }
+        } finally {
+            connection.close();
+        }
+        System.out.println("Rows deleted: " + numberOfDeletedRows);
     }
 
     @Override
