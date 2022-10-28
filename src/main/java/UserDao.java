@@ -50,6 +50,7 @@ public class UserDao implements Dao <User, Integer> {
             connection.close();
         }
         System.out.println("Rows inserted: " + rowsInserted);
+
     }
 
     @Override
