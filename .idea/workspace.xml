@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667041592149</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added hibernate.cfg.xml file.">
+      <created>1667054527734</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667054527734</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +309,7 @@
     <MESSAGE value="Henri finished making CRUD methods" />
     <MESSAGE value="Henri amended persistence.xml file." />
     <MESSAGE value="added slf4j-simple and slf4j-api dependencies to pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added slf4j-simple and slf4j-api dependencies to pom.xml" />
+    <MESSAGE value="added hibernate.cfg.xml file." />
+    <option name="LAST_COMMIT_MESSAGE" value="added hibernate.cfg.xml file." />
   </component>
 </project>
