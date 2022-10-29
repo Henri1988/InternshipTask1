@@ -38,13 +38,13 @@ public class UserDao implements Dao <User, Integer> {
                 rowsInserted = statement.executeUpdate();
 
             // Retrieve the auto-generated id
-            if (rowsInserted > 0) {
-                try (ResultSet resultSet = statement.getGeneratedKeys()) {
-                    if (resultSet.next()) {
-                        generatedId = Optional.of(resultSet.getInt(1));
-                    }
-                }
-            }
+//            if (rowsInserted > 0) {
+//                try (ResultSet resultSet = statement.getGeneratedKeys()) {
+//                    if (resultSet.next()) {
+//                        generatedId = Optional.of(resultSet.getInt(1));
+//                    }
+//                }
+//            }
 
         }finally {
             connection.close();
