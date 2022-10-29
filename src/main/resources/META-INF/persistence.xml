@@ -7,12 +7,9 @@
     <persistence-unit name="PERSISTENCE" transaction-type="RESOURCE_LOCAL">
 
         <description>CRUD JPA and hibernate</description>
+
+        <!--kui see on kirjas, siis pole vaja eraldi entiteid deklareerida-->
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
-<!--        kui see on kirjas siis pole vaja eraldi entiteid deklareerida-->
-
-
-
-
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
@@ -28,5 +25,4 @@
         </properties>
 
     </persistence-unit>
-
 </persistence>

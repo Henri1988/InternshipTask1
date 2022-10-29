@@ -32,21 +32,21 @@
             <version>5.6.12.Final</version>
         </dependency>
 
-<!--        For integrating hibernate and hikaripc connection pool-->
+        <!--For integrating hibernate and hikaripc connection pool-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-hikaricp</artifactId>
             <version>6.1.4.Final</version>
         </dependency>
 
-        <!-- Actual implementation of  hikaripc connection pool-->
+        <!--Actual implementation of  hikaripc connection pool-->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>5.0.1</version>
         </dependency>
 
-        <!-- For logging purposes -->
+        <!--For logging purposes -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>

@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665856132678</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added slf4j-simple and slf4j-api dependencies to pom.xml">
+      <created>1667041592146</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667041592149</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +301,7 @@
     <MESSAGE value="Henri added persistence.xml file to the resourses/META-INF directory and started making CRUD methods" />
     <MESSAGE value="Henri finished making CRUD methods" />
     <MESSAGE value="Henri amended persistence.xml file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Henri amended persistence.xml file." />
+    <MESSAGE value="added slf4j-simple and slf4j-api dependencies to pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added slf4j-simple and slf4j-api dependencies to pom.xml" />
   </component>
 </project>
