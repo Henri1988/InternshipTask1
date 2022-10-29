@@ -26,7 +26,7 @@ public class Main {
             update(user1);
 
             //Delete
-            delete(user1);
+            //delete(user1);
         } finally {
             closeDatabaseConnectionPool();
         }
