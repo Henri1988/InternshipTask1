@@ -16,6 +16,7 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     @Override
     public void save(User user) {
+        System.out.println("Creating user ...");
         entityManager.getTransaction().begin();
         entityManager.persist(user);
         entityManager.getTransaction().commit();
@@ -24,9 +25,9 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     @Override
     public void update(User user) {
-
+        System.out.println("Updating user ...");
         entityManager.getTransaction().begin();
-        user = entityManager.find(User.class, 66);
+        user = entityManager.find(User.class, 92);
 
         user.setFirstName("Rob");
         user.setLastName("Ryan");
@@ -39,9 +40,10 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     @Override
     public void delete(User user) {
+        System.out.println("Deleting user ...");
         entityManager.getTransaction().begin();
 
-        user = entityManager.find(User.class, 66);
+        user = entityManager.find(User.class, 92);
         System.out.println("user id :: " + user.getId());
         entityManager.remove(user);
         entityManager.getTransaction().commit();
@@ -49,7 +51,8 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     @Override
     public void find() {
-        User user = entityManager.find(User.class, 66);
+        System.out.println("Finding user ...");
+        User user = entityManager.find(User.class, 91);
 
         if(user !=null){
             System.out.println(user.toString());
