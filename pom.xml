@@ -14,11 +14,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-        </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -29,10 +25,18 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
         </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.6.12.Final</version>
+        </dependency>
+
+<!--        For integrating hibernate and hikaripc connection pool-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-hikaricp</artifactId>
+            <version>6.1.4.Final</version>
         </dependency>
     </dependencies>
 
