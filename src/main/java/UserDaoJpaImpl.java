@@ -21,21 +21,26 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         entityManager.persist(user);
         entityManager.getTransaction().commit();
 
+        System.out.println("Created user " + user);
+
+
     }
 
     @Override
     public void update(User user) {
         System.out.println("Updating user ...");
         entityManager.getTransaction().begin();
-        user = entityManager.find(User.class, 92);
 
         user.setFirstName("Rob");
         user.setLastName("Ryan");
         user.setEmail("rob.ryan@mail.com");
         user.setCompanyName("Kuehne & Nagel");
         user.setMobileNumber("+37287253823");
+        entityManager.persist(user);
         entityManager.getTransaction().commit();
 
+        User updatedUser = entityManager.find(User.class, user.getId());
+        System.out.println("Updated user: "+ updatedUser);
     }
 
     @Override
@@ -43,16 +48,18 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         System.out.println("Deleting user ...");
         entityManager.getTransaction().begin();
 
-        user = entityManager.find(User.class, 92);
         System.out.println("user id :: " + user.getId());
         entityManager.remove(user);
         entityManager.getTransaction().commit();
+
+        User deletedUser = entityManager.find(User.class, user.getId());
+        System.out.println("Deleted user " + deletedUser);
     }
 
     @Override
-    public void find() {
+    public void find(int userId) {
         System.out.println("Finding user ...");
-        User user = entityManager.find(User.class, 91);
+        User user = entityManager.find(User.class, userId );
 
         if(user !=null){
             System.out.println(user.toString());

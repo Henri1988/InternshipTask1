@@ -8,5 +8,5 @@ public interface UserDao<T,I>{
     void update(T t);
     void delete(T t);
 
-    void find();
+    void find(int id);
 }

@@ -20,13 +20,13 @@ public class Main {
             save(user1);
 
             //GET
-            get();
+            get(user1.getId());
 
             //UPDATE
             update(user1);
 
             //Delete
-            //delete(user1);
+            delete(user1);
         } finally {
             closeDatabaseConnectionPool();
         }
@@ -41,8 +41,8 @@ public class Main {
     public static void delete(User user){
         userDaoJpaImpl.delete(user);
     }
-    public static void get(){
-        userDaoJpaImpl.find();
+    public static void get(int userId){
+        userDaoJpaImpl.find(userId);
     }
 
     private static void initDatabaseConnectionPool() {
