@@ -18,12 +18,13 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
     public void save(User user) {
         System.out.println("Creating user ...");
         entityManager.getTransaction().begin();
-        entityManager.persist(user);
-        entityManager.getTransaction().commit();
-
-        System.out.println("Created user " + user);
-
-
+        try {
+            entityManager.persist(user);
+            entityManager.getTransaction().commit();
+            System.out.println("Created user " + user);
+        } catch (Exception ex){
+            entityManager.getTransaction().rollback();
+        }
     }
 
     @Override
@@ -66,9 +67,8 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
         }
     }
 
+    @Override
     public void close() {
         emf.close();
     }
-
-
 }
