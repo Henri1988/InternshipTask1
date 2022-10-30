@@ -16,4 +16,6 @@ public interface UserDao<T,I>{
     void delete(T t);
 
     void find();
+
+    void close();
 }

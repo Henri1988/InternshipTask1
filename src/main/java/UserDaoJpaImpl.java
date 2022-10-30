@@ -62,4 +62,9 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
             em.close();
         }
     }
+
+    @Override
+    public void close() {
+        emf.close();
+    }
 }

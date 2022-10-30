@@ -23,6 +23,17 @@
 
             <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+            <property name="hibernate.connection.pool_size" value="30" />
+
+<!--            <property name="spring.datasource.hikari.minimumIdle" value="5" />-->
+<!--            <property name="spring.datasource.hikari.maximumPoolSize" value="10" />-->
+<!--            <property name="spring.datasource.hikari.idleTimeout" value="30000" />-->
+<!--            <property name="spring.datasource.type" value="com.zaxxer.hikari.HikariDataSource" />-->
+
+            <property name="hibernate.hikari.minimumIdle" value="5" />
+            <property name="hibernate.hikari.maximumPoolSize" value="10" />
+            <property name="hibernate.hikari.idleTimeout" value="30000" />
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
         </properties>
 
     </persistence-unit>

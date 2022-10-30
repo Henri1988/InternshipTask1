@@ -17,19 +17,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        User user1= new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
-                "Urban Architecture As", "CEO", 3, "Upkeep123");
-        //SAVE
-        saveUser(user1);
-        //GET
-        findUser();
-        //UPDATE
-        user1.setFirstName("Kaarel");
-        user1.setLastName("Suvi");
-        user1.setEmail("kaarel.suvi@mail.com");
-        updateUser(user1);
-        //DELETE
-        deleteUser(user1);
+        try {
+            User user1= new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
+                    "Urban Architecture As", "CEO", 3, "Upkeep123");
+            //SAVE
+            saveUser(user1);
+            System.out.println("Created user: "+ user1);
+            //GET
+            findUser();
+            //UPDATE
+            user1.setFirstName("Kaarel");
+            user1.setLastName("Suvi");
+            user1.setEmail("kaarel.suvi@mail.com");
+            updateUser(user1);
+            //DELETE
+            deleteUser(user1);
+        } finally {
+            userDaoJpaImpl.close();
+        }
+
     }
 
     public static void saveUser(User user) {
