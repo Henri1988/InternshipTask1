@@ -4,7 +4,7 @@ import spi.Dao;
 import java.sql.SQLException;
 import java.util.Collection;
 
-
+//TODO dont manually close the connection. let the connection pool handle it
 public class Main {
 
     private static final Dao<User, Integer> USER_DAO = new UserDao();
@@ -30,10 +30,11 @@ public class Main {
             //GET
             getAllUsers().forEach(System.out::println);
 
+
             //PUT
             firstUser.setFirstName("Lea");
             firstUser.setLastName("Saar");
-            updateUser(secondUser);
+            updateUser(firstUser);
 
             //DELETE
             deleteUser(firstUser);

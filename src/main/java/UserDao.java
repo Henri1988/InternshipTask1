@@ -38,13 +38,13 @@ public class UserDao implements Dao <User, Integer> {
                 rowsInserted = statement.executeUpdate();
 
             // Retrieve the auto-generated id
-//            if (rowsInserted > 0) {
-//                try (ResultSet resultSet = statement.getGeneratedKeys()) {
-//                    if (resultSet.next()) {
-//                        generatedId = Optional.of(resultSet.getInt(1));
-//                    }
-//                }
-//            }
+            if (rowsInserted > 0) {
+                try (ResultSet resultSet = statement.getGeneratedKeys()) {
+                    if (resultSet.next()) {
+                        nonNullUser.setId(resultSet.getInt(1));
+                    }
+                }
+            }
 
         }finally {
             connection.close();
@@ -60,11 +60,12 @@ public class UserDao implements Dao <User, Integer> {
         String sql = "SELECT * FROM user_task1.user";
         System.out.println("Getting all users...");
 
-            try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(sql)) {
+             Statement statement = connection.createStatement();
+                 ResultSet resultSet = statement.executeQuery(sql);
 
                 while (resultSet.next()) {
                     int id = resultSet.getInt("id");
+
                     String email = resultSet.getString("email");
                     String firstName = resultSet.getString("first_name");
                     String lastName = resultSet.getString("last_name");
@@ -78,9 +79,6 @@ public class UserDao implements Dao <User, Integer> {
                     users.add(customer);
                 }
 
-            } finally {
-                connection.close();
-            }
         return users;
     }
 
