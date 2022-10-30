@@ -9,7 +9,7 @@ import javax.persistence.EntityManagerFactory;
 public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     AnnotationConfigApplicationContext context =
-            new AnnotationConfigApplicationContext(Main.class);
+            new AnnotationConfigApplicationContext(AppConfig.class);
     EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
     EntityManager em = emf.createEntityManager();
 
