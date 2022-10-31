@@ -1,20 +1,19 @@
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.stereotype.Component;
 import spi.UserDao;
 
-import javax.persistence.EntityManagerFactory;
+
 
 
 public class Main {
-     private static AnnotationConfigApplicationContext context =
-            new AnnotationConfigApplicationContext(AppConfig.class);
-//    private static final UserDao<User, Integer> userDaoJpaImpl = context.getBean(UserDaoJpaImpl.class);
-    private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
 
+
+    static ApplicationContext factory = new AnnotationConfigApplicationContext(AppConfig.class);
+    static UserDao<User, Integer> userDaoJpaImpl = factory.getBean(UserDaoJpaImpl.class);
     public static void main(String[] args) {
+
+
 
         try {
             User user1= new User("henri.eessalu@gmail.com", "Henri","Eessalu","+37256640162",
