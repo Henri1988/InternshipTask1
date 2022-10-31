@@ -300,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667141007075</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="got beans working">
+      <created>1667254476132</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667254476132</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +345,8 @@
     <MESSAGE value="Made all CRUD methods" />
     <MESSAGE value="Setup hikari connection pool" />
     <MESSAGE value="moved beans to AppConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved beans to AppConfig" />
+    <MESSAGE value="got beans working" />
+    <option name="LAST_COMMIT_MESSAGE" value="got beans working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
