@@ -23,7 +23,7 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
 
     @Override
-    public User save(User user) {
+    public  User save(User user) {
 
         try {
             em.getTransaction().begin();

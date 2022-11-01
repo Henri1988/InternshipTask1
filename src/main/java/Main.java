@@ -1,29 +1,16 @@
-import entities.Group;
 import entities.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
-import spi.IGenericDao;
-import spi.UserDao;
-
-import java.util.List;
 
 
 @Configuration
 public class Main {
 
-    //private static final UserDao<User, Integer> userDaoJpaImpl = new UserDaoJpaImpl();
-
-
-    //JpaUserDao object needs before the
-
-
-    private static Class<entities.User> User;
-    private static final IGenericDao<User> JpaUserDao = new JpaUserDao(User);
-
-    private static Class<entities.Group> Group;
-    private static final IGenericDao<Group> JpaGroupDao = new JpaGroupDao(Group);
-
+    static ApplicationContext factory = new AnnotationConfigApplicationContext(AppConfig.class);
+    static JpaUserDao jpaUserDao = factory.getBean(JpaUserDao.class);
 
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactoryBean() {
@@ -47,34 +34,22 @@ public class Main {
         //Delete
         deleteUser(user1);
 
-
-
-
-
-
-
-
-    }
-
-    public static Group saveGroup(Group group) {
-        return JpaGroupDao.save(group);
     }
 
     public static User saveUser(User user) {
-        return JpaUserDao.save(user);
+        return jpaUserDao.save(user);
     }
 
     public static User updateUser(User user){
-        return JpaUserDao.update(user);
+        return jpaUserDao.update(user);
     }
 
     public static void deleteUser(User user){
-        JpaUserDao.delete(user);
+        jpaUserDao.delete(user);
     }
 
     public static void findUser(){
-        JpaUserDao.find();
-
+        jpaUserDao.find();
     }
 
 }

@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="spring-jpa" />
+        <entry key="$PROJECT_DIR$" value="spring-jpa-connection_pool" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,7 +128,7 @@
         <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
         <item itemvalue="Database Script.group_create.sql" />
-        <item itemvalue="Database Script.user_table_create.sql" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
