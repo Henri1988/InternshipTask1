@@ -41,4 +41,14 @@ public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
     public void delete(Group entity) {
     }
 
+    @Override
+    public void find(int id) {
+
+    }
+
+    @Override
+    public void close() {
+
+    }
+
 }

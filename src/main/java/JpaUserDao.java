@@ -11,71 +11,68 @@ import java.util.List;
 @Component
 public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
-
     static AnnotationConfigApplicationContext context =
             new AnnotationConfigApplicationContext(Main.class);
     static EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
-    static EntityManager em = emf.createEntityManager();
+    static EntityManager entityManager = emf.createEntityManager();
 
     public JpaUserDao(Class<User> persistentClass) {
         super(persistentClass);
     }
 
-
     @Override
     public  User save(User user) {
+        System.out.println("Adding user...");
+        entityManager.getTransaction().begin();
 
         try {
-            em.getTransaction().begin();
-            em.persist(user);
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            System.out.println("User cannot be added.");
+            entityManager.persist(user);
+            entityManager.getTransaction().commit();
+            System.out.println("Created user: " + user);
+        } catch (Exception ex) {
+            entityManager.getTransaction().rollback();
         }
         return user;
     }
 
     @Override
     public User update(User user) {
-        try {
-            em.getTransaction().begin();
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            System.out.println("User cannot be updated.");
-        }
+        System.out.println("Updating user...");
+        entityManager.getTransaction().begin();
+        entityManager.persist(user);
+        entityManager.getTransaction().commit();
+        User updatedUser = entityManager.find(User.class, user.getUserId());
+        System.out.println("Updated user: " + updatedUser);
         return user;
     }
 
     @Override
-    public void find() {
-        try {
-            em.getTransaction().begin();
-            User user = em.find(User.class, 45);
-            if (user != null) {
-                System.out.println(user.toString());
-            }
-            em.getTransaction().commit();
+    public void find(int userId) {
+        System.out.println("Finding user...");
+        User user = entityManager.find(User.class, userId);
 
-        } catch (Exception e) {
-            System.out.println("User does not exist.");
+        if(user != null){
+            System.out.println(user.toString());
         }
     }
-
 
     @Override
     public void delete(User user){
-        try {
-            em.getTransaction().begin();
-            user = em.find(User.class, 40);
-            em.remove(user);
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            System.out.println("User cannot be deleted.");
-        }finally {
-            em.close();
-        }
+        System.out.println("Deleting user...");
+        entityManager.getTransaction().begin();
+
+        System.out.println("user id :: " + user.getUserId());
+        entityManager.remove(user);
+        entityManager.getTransaction().commit();
+
+        User deletedUser = entityManager.find(User.class, user.getUserId());
+        System.out.println("Deleted user: " + deletedUser);
     }
 
+    @Override
+    public void close(){
+        emf.close();
+    }
 
 
 
