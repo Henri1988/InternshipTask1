@@ -125,9 +125,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Database Script.group_create.sql" />
         <item itemvalue="Database Script.user_table_create.sql" />
         <item itemvalue="Database Script.user_create.sql" />
+        <item itemvalue="Database Script.group_create.sql" />
         <item itemvalue="Database Script.user_table_create.sql" />
       </list>
     </recent_temporary>
@@ -355,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666648217014</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="amended persistence.xml">
+      <created>1667255027995</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667255027995</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +381,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Henri installed junit dependency to pom.xml" />
     <MESSAGE value="Henri made empty JdcbConnection class" />
     <MESSAGE value="Henri made main method" />
     <MESSAGE value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
@@ -399,7 +405,8 @@
     <MESSAGE value="Made saveUser and saveGroup methods in the Main method" />
     <MESSAGE value="Made made updateUser method" />
     <MESSAGE value="Finished making Crud methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished making Crud methods" />
+    <MESSAGE value="amended persistence.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="amended persistence.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
