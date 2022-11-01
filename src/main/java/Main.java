@@ -31,13 +31,13 @@ public class Main {
             //SAVE
             saveUser(user1);
             System.out.println("Created user: "+ user1);
+
             //GET
-            findUser();
+            getUser(user1.getUserId());
+
             //UPDATE
-            user1.setFirstName("Kaarel");
-            user1.setLastName("Suvi");
-            user1.setEmail("kaarel.suvi@mail.com");
             updateUser(user1);
+
             //DELETE
             deleteUser(user1);
         } finally {
@@ -52,8 +52,8 @@ public class Main {
     public static void updateUser(User user){
         userDaoJpaImpl.update(user);
     }
-    public static void findUser (){
-        userDaoJpaImpl.find();
+    public static void getUser (int userId){
+        userDaoJpaImpl.find(userId);
     }
     public static void deleteUser(User user){
         userDaoJpaImpl.delete(user);
