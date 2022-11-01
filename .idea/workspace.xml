@@ -362,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667255027995</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="amended crud methods">
+      <created>1667302694778</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667302694779</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +388,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Henri made empty JdcbConnection class" />
     <MESSAGE value="Henri made main method" />
     <MESSAGE value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
     <MESSAGE value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
@@ -406,7 +412,8 @@
     <MESSAGE value="Made made updateUser method" />
     <MESSAGE value="Finished making Crud methods" />
     <MESSAGE value="amended persistence.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="amended persistence.xml" />
+    <MESSAGE value="amended crud methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="amended crud methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

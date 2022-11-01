@@ -9,8 +9,6 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
-
-@PersistenceContext
 @Component
 public class JpaGroupDao extends GenericDaoJpaImpl<Group> implements GroupDao {
 
