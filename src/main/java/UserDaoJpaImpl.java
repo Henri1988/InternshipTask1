@@ -15,10 +15,13 @@ public class UserDaoJpaImpl implements UserDao<User, Integer> {
 
     @Override
     public void save(User user) {
+        System.out.println("Creating user...");
+        em.getTransaction().begin();
         try {
-            em.getTransaction().begin();
+
             em.persist(user);
             em.getTransaction().commit();
+            System.out.println("Created user: " + user);
         } catch (Exception e) {
             System.out.println("User cannot be added.");
         }
