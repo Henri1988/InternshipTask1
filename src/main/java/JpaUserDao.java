@@ -1,20 +1,24 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import entities.User;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import spi.UserDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
 
-@Component
+@Repository
+@Transactional
 public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
-    static AnnotationConfigApplicationContext context =
-            new AnnotationConfigApplicationContext(Main.class);
-    static EntityManagerFactory emf = context.getBean(EntityManagerFactory.class);
-    static EntityManager entityManager = emf.createEntityManager();
+    @PersistenceContext
+    private EntityManager entityManager;
+    @PersistenceContext
+    private EntityManagerFactory emf;
 
     public JpaUserDao(Class<User> persistentClass) {
         super(persistentClass);
