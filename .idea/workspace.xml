@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb12d4a0-be07-45fc-ab5b-79688f78570f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PersistenceJPAConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JpaUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JpaUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +90,8 @@
       <recent name="spi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/dao" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/db" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -162,7 +161,8 @@
       <workItem from="1666597858204" duration="1431000" />
       <workItem from="1666648470286" duration="139000" />
       <workItem from="1667411221146" duration="2068000" />
-      <workItem from="1667419148647" duration="740000" />
+      <workItem from="1667419148647" duration="1159000" />
+      <workItem from="1667427234327" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -381,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667305095070</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="made PersistenceJPAConfig.java class">
+      <created>1667426829558</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1667426829558</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +407,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Henri made main method" />
     <MESSAGE value="Henri added postgresql dependency to pom.xml, made empty User and UserDao classes and made DbUtils class with createConnection and closeConnection methods" />
     <MESSAGE value="Henri added lombok dependency to pom.xml, added fields to User class and made db package and placed user_create.sql file in there" />
     <MESSAGE value="Henri made Dao interface with CRUD functionality in the spi package and made toString() method in the User entity." />
@@ -425,7 +431,8 @@
     <MESSAGE value="Finished making Crud methods" />
     <MESSAGE value="amended persistence.xml" />
     <MESSAGE value="amended crud methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="amended crud methods" />
+    <MESSAGE value="made PersistenceJPAConfig.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="made PersistenceJPAConfig.java class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,5 @@
 package spi;
-import entities.Group;
+import entity.model.Group;
 import org.springframework.stereotype.Component;
 
 

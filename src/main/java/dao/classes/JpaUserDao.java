@@ -1,14 +1,12 @@
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import entities.User;
-import org.springframework.stereotype.Component;
+package dao.classes;
+
+import entity.model.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import spi.UserDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import java.util.List;
 
 
 @Repository

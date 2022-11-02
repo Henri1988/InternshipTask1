@@ -1,5 +1,5 @@
 package spi;
-import entities.User;
+import entity.model.User;
 import org.springframework.stereotype.Component;
 
 

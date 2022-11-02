@@ -1,5 +1,7 @@
-import entities.User;
+package config;
+
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -17,6 +19,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
+@ComponentScan(basePackages = {"dao.classes"})
 public class PersistenceJPAConfig{
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory()
@@ -24,8 +27,7 @@ public class PersistenceJPAConfig{
         LocalContainerEntityManagerFactoryBean em
                 = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan(new String[] { “com.baeldung.persistence.
-                model” });
+        em.setPackagesToScan("entity.model");
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(additionalProperties());
@@ -65,10 +67,10 @@ public class PersistenceJPAConfig{
 
 
 
-    @Bean
-    public JpaUserDao userDaoBean (){
-        return new JpaUserDao(User.class);
-    }
+//    @Bean
+//    public dao.JpaUserDao userDaoBean (){
+//        return new dao.JpaUserDao(User.class);
+//    }
 
 
 }
