@@ -179,7 +179,7 @@
       <workItem from="1667411221146" duration="2068000" />
       <workItem from="1667419148647" duration="1159000" />
       <workItem from="1667427234327" duration="5634000" />
-      <workItem from="1667465585240" duration="8467000" />
+      <workItem from="1667465585240" duration="10147000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -440,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667478544742</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="made PersistenceJPAConfig.java class">
+      <created>1667478796112</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1667478796112</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

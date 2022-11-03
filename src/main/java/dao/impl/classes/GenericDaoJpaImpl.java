@@ -1,6 +1,8 @@
 package dao.impl.classes;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import spi.IGenericDao;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -8,10 +10,12 @@ import javax.persistence.PersistenceContext;
 //Provides generic common implementation of GenericDao interface persistence methods.
 //Extend this abstract class to implement DAO for your specific needs.
 
-@Component
+@Repository
+@Transactional
 public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
 
     private Class<T>persistentClass;
+    @PersistenceContext
     private EntityManager entityManager;
     public GenericDaoJpaImpl (Class <T>persistentClass){
         this.persistentClass = persistentClass;
