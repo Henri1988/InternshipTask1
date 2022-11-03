@@ -1,4 +1,4 @@
-package dao.classes;
+package dao.impl.classes;
 
 import entity.model.User;
 import org.springframework.stereotype.Repository;
@@ -15,6 +15,7 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
+
     @PersistenceContext
     private EntityManagerFactory emf;
 

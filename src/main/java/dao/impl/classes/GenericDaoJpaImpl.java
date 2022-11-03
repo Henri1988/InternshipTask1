@@ -1,4 +1,4 @@
-package dao.classes;
+package dao.impl.classes;
 
 import org.springframework.stereotype.Component;
 import spi.IGenericDao;
