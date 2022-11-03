@@ -1,5 +1,4 @@
 package config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +10,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -36,15 +34,12 @@ public class PersistenceJPAConfig{
 
     @Bean
     public DataSource dataSource(){
-
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
         dataSource.setUsername("postgres");
         dataSource.setPassword("postgres");
         return dataSource;
-
     }
 
     @Bean
@@ -63,15 +58,6 @@ public class PersistenceJPAConfig{
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.\n" + "PostgreSQLDialect");
         return properties;
     }
-
-
-
-//    @Bean
-//    public dao.JpaUserDao userDaoBean (){
-//        return new dao.JpaUserDao(User.class);
-//    }
-
-
 }
 
 
