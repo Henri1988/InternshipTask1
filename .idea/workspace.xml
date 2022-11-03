@@ -68,7 +68,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.37011495",
-    "spring.configuration.checksum": "35e4481791ce9277d6fb275c329442b1",
+    "spring.configuration.checksum": "ab8e2e874e5a3b1f168e79c15fbd56f5",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -98,7 +98,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.CanaryTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task1" />
@@ -106,31 +106,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="group_create.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/db/group_create.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="user_create.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/db/user_create.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="user_table_create.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/db/user_table_create.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="CanaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CanaryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CanaryTest.fly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CanaryTest" />
+      <option name="METHOD_NAME" value="fly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CanaryTest" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.CanaryTest.fly" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Database Script.user_table_create.sql" />
-        <item itemvalue="Database Script.user_create.sql" />
-        <item itemvalue="Database Script.group_create.sql" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +178,8 @@
       <workItem from="1666648470286" duration="139000" />
       <workItem from="1667411221146" duration="2068000" />
       <workItem from="1667419148647" duration="1159000" />
-      <workItem from="1667427234327" duration="5562000" />
+      <workItem from="1667427234327" duration="5634000" />
+      <workItem from="1667465585240" duration="8173000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -409,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667464875911</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="made PersistenceJPAConfig.java class">
+      <created>1667465484432</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1667465484432</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

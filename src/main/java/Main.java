@@ -1,7 +1,11 @@
-//@Configuration
-//public class Main {
-//    public static void main(String[] args) {
-//
+import org.springframework.context.annotation.ComponentScan;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
 //        try {
 //            entities.User user1 =new User("henri.eessalu@gmail.com", "Peeter","Eessalu","+37256640162",
 //                    "Urban Architecture As", "CEO", 3, "Upkeep123");
@@ -18,8 +22,8 @@
 //        }finally {
 //            jpaUserDao.close();
 //        }
-//    }
-//
+    }
+
 //    public static User saveUser(User user) {
 //        return jpaUserDao.save(user);
 //    }
@@ -35,5 +39,5 @@
 //    public static void getUser(int userId){
 //        jpaUserDao.find(userId);
 //    }
-//
-//}
+
+}

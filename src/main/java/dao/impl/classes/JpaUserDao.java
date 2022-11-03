@@ -1,6 +1,7 @@
 package dao.impl.classes;
 
 import entity.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import spi.UserDao;

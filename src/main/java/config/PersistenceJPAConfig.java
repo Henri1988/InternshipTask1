@@ -19,17 +19,19 @@ import java.util.Properties;
 @EnableTransactionManagement
 @ComponentScan(basePackages = {"dao.impl.classes"})
 public class PersistenceJPAConfig{
+
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory()
-    {
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+
         LocalContainerEntityManagerFactoryBean em
                 = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("entity.model");
+        em.setPackagesToScan("entity.model.user");
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(additionalProperties());
-        return em; }
+        return em;
+    }
 
 
     @Bean
@@ -52,10 +54,15 @@ public class PersistenceJPAConfig{
     public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
         return new PersistenceExceptionTranslationPostProcessor();
     }
+
     Properties additionalProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.\n" + "PostgreSQLDialect");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        properties.setProperty("hibernate.hikari.minimumIdle", "10" );
+        properties.setProperty("hibernate.hikari.maximumPoolSize", "100");
+        properties.setProperty("hibernate.hikari.idleTimeout","30000");
+        properties.setProperty("hibernate.connection.provider_class","com.zaxxer.hikari.hibernate.HikariConnectionProvider");
         return properties;
     }
 }
