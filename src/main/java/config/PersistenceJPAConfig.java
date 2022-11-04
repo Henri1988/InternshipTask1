@@ -41,7 +41,7 @@ public class PersistenceJPAConfig{
         em.setJpaProperties(additionalProperties());
         return em;
     }
-    EntityManagerFactory emf = entityManagerFactory().getObject();
+    EntityManagerFactory em = entityManagerFactory().getObject();
 
     @Bean
     public DataSource dataSource(){
@@ -54,9 +54,9 @@ public class PersistenceJPAConfig{
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
+    public PlatformTransactionManager transactionManager(EntityManagerFactory em) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(emf);
+        transactionManager.setEntityManagerFactory(em);
         return transactionManager;
     }
 
@@ -82,8 +82,8 @@ public class PersistenceJPAConfig{
     public PersistenceJPAConfig() {
     }
 
-    public PersistenceJPAConfig(EntityManagerFactory emf) {
-        this.emf = emf;
+    public PersistenceJPAConfig(EntityManagerFactory em) {
+        this.em = em;
     }
 
 }
