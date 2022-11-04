@@ -1,7 +1,10 @@
 package dao.impl.classes;
 
 import entity.model.User;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import spi.UserDao;
@@ -10,9 +13,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 
 
-@Repository
+@Component
 @Transactional
 public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
+
 
     @PersistenceContext
     private EntityManager entityManager;

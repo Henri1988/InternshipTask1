@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fb12d4a0-be07-45fc-ab5b-79688f78570f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/classes/GenericDaoJpaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/classes/GenericDaoJpaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spi/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spi/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +70,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.37011495",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "ab8e2e874e5a3b1f168e79c15fbd56f5",
     "vue.rearranger.settings.migration": "true"
   },
@@ -87,6 +90,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="config" />
       <recent name="spi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,7 +102,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CanaryTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Task1" />
@@ -106,11 +110,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="user_table_create.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/db/user_table_create.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="01740f0f-d0d8-460a-af50-b743476844af" namespace="database/&quot;postgres&quot;/schema/&quot;user_task1&quot;" />
-      <method v="2" />
+    <configuration name="PersistenceJPAConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="config.PersistenceJPAConfig" />
+      <module name="Task1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="CanaryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task1" />
@@ -142,15 +153,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CanaryTest" />
+        <item itemvalue="Application.PersistenceJPAConfig" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.CanaryTest.fly" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Database Script.user_table_create.sql" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fb12d4a0-be07-45fc-ab5b-79688f78570f" name="Changes" comment="" />
@@ -179,7 +193,8 @@
       <workItem from="1667411221146" duration="2068000" />
       <workItem from="1667419148647" duration="1159000" />
       <workItem from="1667427234327" duration="5634000" />
-      <workItem from="1667465585240" duration="10147000" />
+      <workItem from="1667465585240" duration="12019000" />
+      <workItem from="1667494379929" duration="16043000" />
     </task>
     <task id="LOCAL-00001" summary="Henri installed junit dependency to pom.xml">
       <created>1665505805276</created>
@@ -447,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667478796112</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="made PersistenceJPAConfig.java class">
+      <created>1667482194799</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1667482194799</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
