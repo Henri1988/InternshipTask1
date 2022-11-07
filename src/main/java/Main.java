@@ -1,4 +1,5 @@
 import config.PersistenceJPAConfig;
+import dao.impl.classes.JpaUserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,12 +11,14 @@ public class Main {
 //
     public static void main(String[] args) {
 
-        applicationContext =
-                    new AnnotationConfigApplicationContext(PersistenceJPAConfig.class);
+      ApplicationContext  applicationContext =
+              new AnnotationConfigApplicationContext(PersistenceJPAConfig.class);
+      JpaUserDao jpaUserDao = applicationContext.getBean(JpaUserDao.class);
 
-            for (String beanName : applicationContext.getBeanDefinitionNames()) {
-                System.out.println(beanName);
-            }
+
+
+
+
 
 
 

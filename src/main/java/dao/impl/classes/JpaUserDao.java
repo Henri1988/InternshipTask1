@@ -4,6 +4,7 @@ import entity.model.User;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,22 +12,34 @@ import spi.UserDao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceUnit;
 
 
-@Component
+@Repository
 @Transactional
 public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
-
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    @PersistenceContext
+
     private EntityManagerFactory emf;
 
     public JpaUserDao(Class<User> persistentClass) {
         super(persistentClass);
     }
+
+    @Autowired
+    public JpaUserDao() {
+        super(User.class);
+    }
+
+
+    public JpaUserDao(Class<User> persistentClass, EntityManager entityManager) {
+        super(persistentClass);
+        this.entityManager = entityManager;
+    }
+
 
     @Override
     public  User save(User user) {
@@ -83,5 +96,13 @@ public class JpaUserDao extends GenericDaoJpaImpl<User> implements UserDao {
     }
 
 
+    @PersistenceUnit
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
 
+    @Autowired
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 }

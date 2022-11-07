@@ -1,56 +1,85 @@
 package config;
+import com.zaxxer.hikari.HikariDataSource;
 import dao.impl.classes.JpaUserDao;
 import entity.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.hibernate.hikaricp.internal.HikariCPConnectionProvider;
+import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.jpa.AbstractEntityManagerFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
-import javax.sql.DataSource;
+import javax.persistence.spi.PersistenceProvider;
 import java.util.Properties;
 
 
+
+@Component
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"dao.impl.classes"})
-public class PersistenceJPAConfig{
+@ComponentScan(basePackages = {"dao.impl.classes"}) //Spring scans through the package and creates beans for those packages.
+public class PersistenceJPAConfig{                  // and stores them in the spring container.
+
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+    HikariDataSource dataSource() {
+        HikariDataSource ds = new HikariDataSource();
+        ds.setMaximumPoolSize(100);
+        ds.setDriverClassName("org.postgresql.Driver");
+        ds.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres"); ;
+        ds.setUsername("postgres");
+        ds.setPassword("postgres");
+        return ds;
+    }
 
-        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource());
-        em.setPackagesToScan("entity.model");
+
+    @Bean
+    @Transactional
+    public EntityManagerFactory entityManagerFactory() {
+        // final Database database = Database.valueOf(vendor.toUpperCase());
+
+        final LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+        factory.setPersistenceUnitName("PERSISTENCE_UNIT");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        em.setJpaVendorAdapter(vendorAdapter);
-        em.setJpaProperties(additionalProperties());
-        return em;
+        factory.setJpaVendorAdapter(vendorAdapter);
+
+        factory.setPackagesToScan("entity.model");
+        factory.setDataSource(dataSource());
+        factory.setJpaProperties(additionalProperties());
+        factory.afterPropertiesSet();
+        return factory.getObject();
+
+
     }
-    EntityManagerFactory em = entityManagerFactory().getObject();
+
+//    @Bean
+//    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+//
+//        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+//        em.setDataSource(dataSource());
+//        em.setPackagesToScan("entity.model");
+//
+//        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+//        em.setJpaVendorAdapter(vendorAdapter);
+//        em.setJpaProperties(additionalProperties());
+//        return em;
+//    }
+
 
     @Bean
-    public DataSource dataSource(){
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres");
-        return dataSource;
+    public EntityManager entityManager (EntityManagerFactory entityManagerFactory){
+        return entityManagerFactory.createEntityManager();
     }
 
     @Bean
@@ -75,18 +104,8 @@ public class PersistenceJPAConfig{
         properties.setProperty("hibernate.hikari.maximumPoolSize", "100");
         properties.setProperty("hibernate.hikari.idleTimeout","30000");
         properties.setProperty("hibernate.connection.provider_class","com.zaxxer.hikari.hibernate.HikariConnectionProvider");
-        properties.setProperty("hibernate.connection.provider_class","com.zaxxer.hikari.hibernate.HikariConnectionProvider");
         return properties;
     }
-
-    public PersistenceJPAConfig() {
-    }
-
-    public PersistenceJPAConfig(EntityManagerFactory em) {
-        this.em = em;
-    }
-
 }
-
 
 

@@ -1,10 +1,11 @@
 package dao.impl.classes;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import spi.IGenericDao;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -18,6 +19,7 @@ public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
     @PersistenceContext
     private Class<T>persistentClass;
     @PersistenceContext
+    @Autowired
     private EntityManager entityManager;
     public GenericDaoJpaImpl (Class <T>persistentClass){
         this.persistentClass = persistentClass;
@@ -52,5 +54,7 @@ public abstract class GenericDaoJpaImpl<T> implements IGenericDao<T> {
     @Override
     public void delete(T entity) {
     }
+
+
 }
 
